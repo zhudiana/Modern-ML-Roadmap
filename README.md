@@ -8,6 +8,44 @@ The repository documents the learning process through organized topics, explanat
 
 ---
 
+## Prerequisites
+
+While the roadmap is designed to introduce Machine Learning concepts from the ground up, having a basic understanding of the following foundational topics will help learners grasp the material more effectively.
+
+These topics are typically covered in undergraduate programs in **computer science, mathematics, or engineering**.
+
+### Mathematical Analysis
+
+* Functions
+* Differential calculus
+* Multivariable / multivariate calculus
+* Partial derivatives
+* Gradients
+
+### Linear Algebra
+
+* Vectors
+* Matrices
+* Tensors
+* Inner (dot/scalar) products
+* Matrix inverses
+* Vector and matrix norms
+
+### Probability and Statistics
+
+* Probability density functions
+* Mean and variance
+* Normal random variables
+* Conditional probability
+* Joint probability
+
+### Algorithms
+
+* Basic understanding of computational algorithms
+* Algorithmic thinking and problem-solving approaches
+
+---
+
 # Roadmap Structure
 
 ### 1. Introduction to Machine Learning
