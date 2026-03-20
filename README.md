@@ -115,6 +115,3 @@ Topics include:
 
 ⭐ If you find this roadmap useful, consider giving the repository a star.
 
-
-
-Those are exactly why repos like your FastAPI roadmap got **22+ stars and forks**.
