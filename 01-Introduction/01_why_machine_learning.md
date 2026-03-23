@@ -60,6 +60,84 @@ Writing rules to capture every variation would be nearly impossible.
 
 Instead, ML systems are trained on **thousands or millions of examples** so they can learn these patterns automatically.
 
+## From Example to a Formal ML Problem
+
+The handwritten digit recognition example illustrates how Machine Learning problems are formally defined.
+
+In Machine Learning, we typically describe a problem using two key elements:
+
+- **Input ((x))** — the data provided to the system
+- **Output ((f(x)))** — the prediction the system should produce
+
+For handwritten digit recognition:
+
+- The **input ((x))** could be an image represented as a grid of pixels.
+- The **output ((f(x)))** is the predicted digit (0–9).
+
+Instead of writing explicit rules, the system learns a function (f) that maps inputs to outputs.
+
+---
+
+## Supervised Learning
+
+This example belongs to a category called **Supervised Learning**.
+
+In supervised learning, the model is trained using a **training dataset** containing:
+
+- input data ((x))
+- the correct output (label)
+
+For handwritten digits, the training data consists of thousands of images where the correct digit is already known.
+
+The algorithm analyzes these examples and learns a function that connects inputs to outputs.
+
+---
+
+## Classification
+
+Handwritten digit recognition is specifically a **classification problem**.
+
+Classification means the output belongs to one of several **discrete categories**, known as **classes**.
+
+In this case, the possible classes are:
+
+[
+{0,1,2,3,4,5,6,7,8,9}
+]
+
+The model's task is to assign each new image to the correct class.
+
+---
+
+## Generalization
+
+The goal of Machine Learning is not simply to memorize the training examples.
+
+Instead, the system must **generalize**.
+
+Generalization means the model can correctly predict outputs for **new, unseen data**.
+
+A good model learns the underlying patterns rather than memorizing specific examples.
+
+---
+
+### Example Workflow
+
+```
+Training Data
+(x₁, y₁)
+(x₂, y₂)
+(x₃, y₃)
+
+      ↓
+
+Learn function f(x)
+
+      ↓
+
+Predict new outputs
+```
+
 ---
 
 # Real-World Impact of Machine Learning
