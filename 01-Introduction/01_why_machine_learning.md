@@ -117,7 +117,9 @@ Instead, the system must **generalize**.
 
 Generalization means the model can correctly predict outputs for **new, unseen data**.
 
-A good model learns the underlying patterns rather than memorizing specific examples.
+A system is useless if it just memorizes the training data like a lookup table.
+
+It must learn the underlying patterns so that when it is faced with brand-new, unseen data, it can make accurate predictions.
 
 ---
 
