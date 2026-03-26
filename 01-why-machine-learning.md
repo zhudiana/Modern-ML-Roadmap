@@ -217,5 +217,3 @@ Ultimately, Machine Learning aims to:
 While powerful technologies always carry risks, the central goal of ML is to **empower humans and expand what we are capable of achieving**.
 
 In short, learning Machine Learning means learning how to build systems that adapt, grow, and tackle challenges that humans alone cannot easily solve.
-
----
