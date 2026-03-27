@@ -86,7 +86,7 @@ where:
 
 The dataset therefore consists of pairs:
 
-(**$x₁$**, **$d₁$**), (**$x₂$**, **$d₂$**), ..., (xₗ, dₗ)
+(**$x₁$**, **$d₁$**), (**$x₂$**, **$d₂$**), ..., (**$x_n$**, **$d_n$**)
 
 We assume there exists an unknown true function **$f$** that maps inputs to outputs:
 
