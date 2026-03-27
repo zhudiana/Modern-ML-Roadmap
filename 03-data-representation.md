@@ -32,7 +32,7 @@ Examples include:
 - one patient
 - one email
 
-In ML mamathematicsth, a single row is often called a **pattern** or **instance** and is represented by a vector **$x$**.
+In ML mathematics, a single row is often called a **pattern** or **instance** and is represented by a vector **$x$**.
 
 The total number of rows is the dimension of the dataset, usually represented by the letter **$l$**.
 
@@ -51,7 +51,7 @@ These properties are called **features** or **attributes**.
 
 The total number of features is the dimension of the input, represented by **$n$**.
 
-If we want to point to a specific piece of data, like the 3rd attribute of the 2nd patient, we use indexing, such as $x_{p,i}$.
+If we want to point to a specific piece of data, like the 3rd attribute of the 2nd patient, we use indexing, such as $x_{p,i}$ ($x_{2,3}$).
 
 where:
 
@@ -118,9 +118,14 @@ If we encoded them as
 
 1, 2, 3
 
-![Dataset describing fruits](images/table3.png)
+
+the model might incorrectly assume that **C is larger than A**.
+
+Instead we use **one-hot encoding**.
 
 Example representation:
+
+![Dataset describing fruits](images/table3.png)
 
 A → (1,0,0)
 B → (0,1,0)
