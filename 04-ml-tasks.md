@@ -92,7 +92,7 @@ We assume there exists an unknown true function **$f$** that maps inputs to outp
 
 **$f(x)$**
 
-Since this function is unknown, the algorithm tries to learn an approximation called a **hypothesis h**.
+Since this function is unknown, the algorithm tries to learn an approximation called a hypothesis **$h$**.
 
 The goal is for the hypothesis to approximate the true function:
 
