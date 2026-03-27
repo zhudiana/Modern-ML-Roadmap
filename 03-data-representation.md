@@ -32,7 +32,7 @@ Examples include:
 - one patient
 - one email
 
-In ML mamathematicsth, a single row is often called a **pattern** or **instance** and is represented by a vector **$x$**.
+In ML mathematics, a single row is often called a **pattern** or **instance** and is represented by a vector **$x$**.
 
 The total number of rows is the dimension of the dataset, usually represented by the letter **$l$**.
 
