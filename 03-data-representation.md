@@ -51,7 +51,7 @@ These properties are called **features** or **attributes**.
 
 The total number of features is the dimension of the input, represented by **$n$**.
 
-If we want to point to a specific piece of data, like the 3rd attribute of the 2nd patient, we use indexing, such as $x_{p,i}$.
+If we want to point to a specific piece of data, like the 3rd attribute of the 2nd patient, we use indexing, such as $x_{p,i}$ ($x_{2,3}$).
 
 where:
 
