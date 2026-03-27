@@ -118,9 +118,14 @@ If we encoded them as
 
 1, 2, 3
 
-![Dataset describing fruits](images/table3.png)
+
+the model might incorrectly assume that **C is larger than A**.
+
+Instead we use **one-hot encoding**.
 
 Example representation:
+
+![Dataset describing fruits](images/table3.png)
 
 A → (1,0,0)
 B → (0,1,0)
