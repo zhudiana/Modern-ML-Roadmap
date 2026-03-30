@@ -95,13 +95,13 @@ where:
 
 The dataset therefore consists of pairs:
 
-(**$x₁$**, **$d₁$**), (**$x₂$**, **$d₂$**), ..., (xₗ, dₗ)
+(**$x_1$**, **$d_1$**), (**$x_2$**, **$d_2$**), ..., (**$x_n$**, **$d_n$**)
 
 We assume there exists an unknown true function **$f$** that maps inputs to outputs:
 
 **$f(x)$**
 
-Since this function is unknown, the algorithm tries to learn an approximation called a **hypothesis h**.
+Since this function is unknown, the algorithm tries to learn an approximation called a hypothesis **$h$**.
 
 The goal is for the hypothesis to approximate the true function:
 
