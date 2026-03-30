@@ -146,6 +146,14 @@ They are:
 - easy to interpret
 - similar to traditional programming logic
 
+Examples inlcude:
+
+- Decision Trees
+
+- Inductive Logic Programming
+
+- Evolutionary Algorithms
+
 ---
 
 ### 3. Probabilistic Models
@@ -161,6 +169,12 @@ This allows the system to:
 - model uncertainty
 - compute likelihoods
 - make probabilistic predictions
+
+Examples include:
+
+- Traditional Parametric Models
+
+- Graphical Models (Bayesian Networks, Naïve Bayes, and Hidden Markov Models)
 
 ---
 
@@ -180,30 +194,86 @@ To predict a value:
 - find the **K nearest neighbors**
 - compute their average (for regression)
 
-## Key Points
+---
 
-The choice of model determines:
+### 5. Neural Netwoks
 
-- what patterns can be learned
-- how flexible the system is
-- how predictions are made
+Neural networks are powerful models capable of learning **complex, non-linear relationships** between inputs and outputs.
 
-> A model defines the **set of possible solutions** the learning algorithm can choose from.
+They can be viewed as computational models that:
 
-## Summary
+- take an input vector **x**
+- process it through multiple layers
+- produce outputs such as **categories or real values**
 
-Building a Machine Learning model involves:
+Unlike linear models, neural networks can represent highly complex functions.
 
-- defining a hypothesis space
-- selecting a model structure
-- learning parameters from data
+<p align="center"> <img src="images/neural-networks.png" width="500"> </p>
 
-The ultimate goal is to find a function:
+Neural networks define a **class of functions** that can approximate very complicated patterns in data.
 
-**$h(x)$**
+This makes them suitable for tasks such as:
 
-that closely approximates the true relationship:
+- image recognition
+- natural language processing
+- speech recognition
 
-**$f(x)$**
+## Choosing the Right Model
 
-and generalizes well to new data.
+A natural question arises:
+
+> Is there a single best model for all problems?
+
+---
+
+### No Free Lunch Theorem
+
+The answer is **no**.
+
+The **No Free Lunch Theorem** states that:
+
+> There is no universally best learning algorithm that works optimally for every possible problem.
+
+If a model performs very well on one type of problem, it must perform worse on others.
+
+---
+
+### Why This Matters
+
+Because of this limitation:
+
+- there is no "one-size-fits-all" solution
+- different problems require different models
+- choosing the right model is a key part of Machine Learning
+
+---
+
+### Comparing Models
+
+Models are not equivalent. They differ in important ways:
+
+#### 1. Flexibility (Expressiveness)
+
+Some models can represent very complex relationships.
+
+- Linear models → limited (simple relationships)
+- Neural networks → highly flexible (complex patterns)
+
+#### 2. Control of Complexity
+
+Highly flexible models can easily become too complex.
+
+This can lead to:
+
+- overfitting (memorizing data instead of learning patterns)
+
+Different models provide different ways to control this complexity.
+
+---
+
+### Core Insight
+
+Modern Machine Learning is about finding the right balance:
+
+> Using models that are flexible enough to capture patterns,  
+> while controlling their complexity to ensure good generalization.
