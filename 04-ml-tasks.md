@@ -75,6 +75,10 @@ Predictive tasks usually rely on **labeled data**, meaning the correct answers a
 
 ### Supervised Learning
 
+**Supervised Learning** is a machine learning approach that's defined by its use of _labeled data sets_.
+
+> Using labeled inputs and outputs, the model can measure its accuracy and learn over time.
+
 In supervised learning, the algorithm receives training examples in the form:
 
 (**$x$**, **$d$**)
@@ -83,6 +87,11 @@ where:
 
 - **$x$** = input data
 - **$d$** = desired output (target label)
+
+> In statistical terminology:
+
+- inputs (**x**) are called **independent variables**
+- outputs (**d**) are called **dependent variables** or **responses**
 
 The dataset therefore consists of pairs:
 
@@ -100,11 +109,35 @@ The goal is for the hypothesis to approximate the true function:
 
 A key objective of supervised learning is **generalization**, meaning the model should perform well not only on the training data but also on **new, unseen examples**.
 
+Supervised learning can be categorized in to two:
+
+**i. Classification**
+
+**ii. Regression**
+
 ---
 
-### Classification
+### i. Classification
 
 Classification predicts **discrete categories**.
+
+In a classification task, the output of the model belongs to a finite set of possible classes:
+
+f(x) ∈ {1, 2, ..., K}
+
+where K is the number of classes.
+
+---
+
+#### Types of Classification
+
+- **Binary Classification**: only two classes  
+  (e.g., spam vs non-spam)
+
+- **Multi-class Classification**: more than two classes  
+  (e.g., handwritten digits 0–9)
+
+---
 
 Examples include:
 
@@ -120,7 +153,7 @@ Recognizing handwritten digits is a **classification task** because the model mu
 
 ---
 
-### Regression
+### ii. Regression
 
 Regression predicts **continuous numerical values**.
 
@@ -148,7 +181,23 @@ These tasks typically use **unlabeled data**.
 
 ---
 
-### Clustering
+### Unsupervised Learning
+
+**Unsupervised Learning** uses machine learning algorithms to analyze and cluster unlabeled data sets.
+
+These algorithms discover hidden patterns in data without the need for human intevention.
+
+Unsupervised Learning Categories:
+
+**i. Clustering**
+
+**ii. Association**
+
+**iii. Dimensionality reduction**
+
+---
+
+### i. Clustering
 
 Clustering attempts to **group similar data points together**.
 
@@ -166,7 +215,7 @@ Each group formed by the algorithm is called a **cluster**.
 
 ---
 
-### Association Rules
+### ii. Association Rules
 
 Association rule learning finds **relationships between items in datasets**.
 
@@ -186,3 +235,24 @@ often also buy:
 <img src="images/association.png" alt="Association Rules" width="400"/>
 
 These relationships help businesses understand **co-occurrence patterns** in customer behavior.
+
+---
+
+## Semi-supervised Learning
+
+**Semi-supervised Learning** combines _supervised_ and _unsupervised_ learning by using both labeled and unlabeled data to train models for classification and regression tasks.
+
+---
+
+## Reinforcement Learning
+
+**Reinforcement Learning** is a type of machine learning process in which autonomous agents learn to make decisions by interacting with their environment.
+
+In reinforcement learning, autonomous agents learn to perform a task by _trial and error_ in the absence of any guidance from a human user.
+
+> It particularly addresses _sequential decision-making_ problems in uncertain environments.
+
+Example:
+
+- Robots
+- Self-driving cars
