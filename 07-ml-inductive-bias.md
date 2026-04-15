@@ -132,9 +132,9 @@ Because:
 - no preference between them
 - predictions become arbitrary
 
-## Key Takeaway
+Therefore:
 
-Inductive bias is not a limitation — it is a **requirement**.
+Inductive bias is not a limitation — it is a **requirement**. Since a model's job is not just to predict but to **make consistent and justifiable predictions**, inductive bias makes that possible.
 
 It allows Machine Learning systems to:
 
@@ -142,9 +142,66 @@ It allows Machine Learning systems to:
 - choose meaningful hypotheses
 - generalize to unseen data
 
-## Final Insight
+## Using Inductive Bias: Conjunctive Rules
 
-> A model’s job is not just to predict —
-> it is to **make consistent and justifiable predictions**.
+So far, we have seen that without inductive bias, learning is impossible due to the massive hypothesis space.
 
-Inductive bias is what makes this possible.
+To solve this, we introduce a **language bias** by restricting the type of functions the model is allowed to use.
+
+---
+
+### Restricting the Hypothesis Space
+
+Instead of allowing **all possible Boolean functions**, we limit the model to only use **conjunctive rules**.
+
+These are logical rules built using:
+
+- AND operations
+- simple conditions on inputs
+
+Examples:
+
+- **$h(x) = x_2$**
+- **$h(x) = x_1 \text { AND } x_2$**
+- **$h(x) = \text{NOT}(x_1) \text{ AND } x_2 $**
+
+---
+
+### How This Reduces Complexity
+
+For each input feature, we now have only three possibilities:
+
+- the feature must be true
+- the feature must be false
+- the feature is ignored ("don’t care")
+
+So for **$n$** inputs:
+
+**$|H| = 3^n + 1$**
+
+The **$+1$** accounts for **contradictory rules**.
+
+For example, a rule that requires:
+
+- **$ x_1 = 1 \text { AND } x_1 = 0 $**
+
+is impossible to satisfy.
+
+All such contradictory rules always evaluate to **False**, so they are grouped together as a **single additional hypothesis**.
+
+---
+
+For **$n = 4 $**
+
+**$|H| = 3^4 + 1 = 81 + 1 = 82$**
+
+---
+
+### Why This Matters
+
+Compare:
+
+- Without bias → **$65,536$** possible functions
+- With bias → only **$82$** hypotheses
+
+> This dramatically reduces the search space.
