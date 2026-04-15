@@ -205,3 +205,169 @@ Compare:
 - With bias → only **$82$** hypotheses
 
 > This dramatically reduces the search space.
+
+# Version Space
+
+When learning from data, not all hypotheses are valid.
+
+A hypothesis **$h$** is considered **consistent** if it correctly predicts all training examples:
+
+> **$h(x) = d(x)$** for all training examples
+
+---
+
+The **Version Space** is the set of all hypotheses that are consistent with the training data.
+
+**$VS_{H,TR} = { h \in H \mid h(x) = d(x) \text{ for all training examples} }$**
+
+- Hypothesis Space (**$H$**) → all possible models
+- Version Space (**$VS$**) → only the models that **fit the data**
+
+This is important because:
+
+- The learning algorithm does not search all of **$H$**
+- It only considers hypotheses inside the **Version Space**
+
+> Inductive bias helps make this space **small and searchable**.
+
+### When Bias is Too Strong
+
+Inductive bias helps learning — but it can also be **too restrictive**.
+
+### Example
+
+If we restrict our model to only **AND rules**:
+
+```
+(x1 AND x2)
+```
+
+But the true function is:
+
+```
+(x1 OR x2)
+```
+
+Then:
+
+- the correct function is **not in $H$**
+- the model can **never learn it**
+
+## The Idea of an Unbiased Learner
+
+To avoid missing the true function, we might try:
+
+> Removing all restrictions on **$H$**
+
+This creates a hypothesis space that contains **all possible functions**.
+
+Mathematically:
+
+**$H = \mathcal{P}(X)$**
+
+The problem with this is the space becomes **very large**.
+
+Example:
+
+- 10 binary inputs → 1024 input combinations
+- Number of functions:
+
+**$2^{1024} \approx 10^{308}$**
+
+Even though the true function is inside this space, it becomes impossible to search or choose a solution.
+
+## Why an Unbiased Learner Fails
+
+Without inductive bias:
+
+- many hypotheses fit the training data
+- the Version Space becomes very large
+
+## What Happens on New Data?
+
+For a new unseen input:
+
+- some hypotheses predict **1**
+- others predict **0**
+
+> Half of the hypotheses predict 1
+> Half predict 0
+
+As a result, the model cannot decide. It returns _no prediction_. This leads to a fundamental result:
+
+> **Without inductive bias, generalization is impossible.**
+
+## Why Bias is Essential
+
+Inductive bias allows the model to:
+
+- reduce the hypothesis space
+- prefer certain solutions over others
+- make consistent predictions
+
+## Choosing the Right Inductive Bias
+
+Now that we know inductive bias is necessary, an important question arises:
+
+> What kind of bias should we use?
+
+### Language Bias vs Search Bias
+
+Inductive bias can be introduced in two main ways:
+
+- **Language Bias** → restricting the hypothesis space
+- **Search Bias** → guiding how the algorithm searches within that space
+
+---
+
+### The Risk of Strong Language Bias
+
+A strict language bias can make learning **too limited**.
+
+Example:
+
+- If the model only allows **linear functions**
+- but the true relationship is **non-linear**
+
+Then the correct solution is **not even in the hypothesis space**.
+
+> The model will fail before learning even begins.
+
+---
+
+### Why Modern Machine Learning Prefers Flexible Models
+
+Modern ML methods (such as neural networks and decision trees):
+
+- use **very large and expressive hypothesis spaces**
+- can represent **complex functions**
+
+This avoids excluding the true function.
+
+---
+
+### The Role of Search Bias
+
+Since the hypothesis space is huge:
+
+- it is impossible to search all possibilities
+- the algorithm must use **heuristics**
+
+This introduces a **search bias**, such as:
+
+- preferring simpler solutions
+- following gradient-based optimization
+- stopping early
+
+> Modern Machine Learning relies less on restricting _what can be learned_
+> and more on guiding _how learning happens_
+
+---
+
+# Core Conclusions
+
+- Learning **without bias** cannot extract patterns from data
+- Every Machine Learning method includes **inductive bias**
+- The real challenge is:
+
+> choosing the **right bias** for the problem
